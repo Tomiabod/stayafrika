@@ -16,6 +16,7 @@ import Dashboard from "@/pages/Dashboard";
 import HostDashboard from "@/pages/HostDashboard";
 import CreateListing from "@/pages/CreateListing";
 import AdminDashboard from "@/pages/AdminDashboard";
+import Personas from "@/pages/Personas";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/host/dashboard" component={HostDashboard} />
       <Route path="/host/create-listing" component={CreateListing} />
       <Route path="/admin/dashboard" component={AdminDashboard} />
+      <Route path="/personas" component={Personas} />
       <Route component={NotFound} />
     </Switch>
   );
