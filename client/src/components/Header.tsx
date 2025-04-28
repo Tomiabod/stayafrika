@@ -46,6 +46,11 @@ const Header = () => {
               About
             </div>
           </Link>
+          <Link href="/personas">
+            <div className={`nav-item font-medium hover:text-primary transition cursor-pointer ${location === '/personas' ? 'text-primary' : 'text-neutral-dark'}`}>
+              Personas
+            </div>
+          </Link>
           <Link href="/contact">
             <div className={`nav-item font-medium hover:text-primary transition cursor-pointer ${location === '/contact' ? 'text-primary' : 'text-neutral-dark'}`}>
               Contact
@@ -166,6 +171,11 @@ const Header = () => {
             <Link href="/about">
               <div className="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark hover:bg-gray-100 cursor-pointer">
                 About
+              </div>
+            </Link>
+            <Link href="/personas">
+              <div className="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark hover:bg-gray-100 cursor-pointer">
+                Personas
               </div>
             </Link>
             <Link href="/contact">
