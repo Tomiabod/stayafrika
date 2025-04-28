@@ -25,7 +25,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       secret: process.env.SESSION_SECRET || "stayafrika-secret",
       resave: false,
       saveUninitialized: false,
-      cookie: { secure: process.env.NODE_ENV === "production", maxAge: 86400000 }, // 24 hours
+      cookie: { 
+        secure: process.env.NODE_ENV === "production",
+        sameSite: process.env.NODE_ENV === "production" ? 'none' : 'lax',
+        maxAge: 86400000 // 24 hours
+      },
       store: new SessionStore({ checkPeriod: 86400000 }) // 24 hours
     })
   );
